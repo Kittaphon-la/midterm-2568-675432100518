@@ -133,6 +133,4 @@ http://localhost:3000
 
 ---
 
-## 🎓 Conclusion
 
-This project demonstrates a refactoring from Monolithic Architecture to Layered Architecture following software architecture best practices.

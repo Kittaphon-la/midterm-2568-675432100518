@@ -114,12 +114,12 @@ http://localhost:3000
 | Method | Endpoint                 |
 | ------ | ------------------------ |
 | GET    | /api/students            |
-| GET    | /api/students/:id        |
+| GET    | /api/students/5       |
 | POST   | /api/students            |
-| PUT    | /api/students/:id        |
-| PATCH  | /api/students/:id/gpa    |
-| PATCH  | /api/students/:id/status |
-| DELETE | /api/students/:id        |
+| PUT    | /api/students/5       |
+| PATCH  | /api/students/5/gpa    |
+| PATCH  | /api/students/5/status |
+| DELETE | /api/students/5       |
 
 ---
 

@@ -39,6 +39,28 @@ class StudentRepository {
             );
         });
     }
+    async update(id, studentData) {
+    const { student_code, first_name, last_name, email, major } = studentData;
+
+    return new Promise((resolve, reject) => {
+        const sql = `
+            UPDATE students 
+            SET student_code = ?, first_name = ?, last_name = ?, email = ?, major = ?
+            WHERE id = ?
+        `;
+
+        db.run(sql, [student_code, first_name, last_name, email, major, id], function(err) {
+            if (err) reject(err);
+            else {
+                db.get('SELECT * FROM students WHERE id = ?', [id], (err, row) => {
+                    if (err) reject(err);
+                    else resolve(row);
+                });
+            }
+        });
+    });
+}
+
 }
 
 module.exports = new StudentRepository();
